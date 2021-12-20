@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import django_heroku
 import environ
 from datetime import timedelta
 # Initialise environment variables
@@ -225,3 +226,8 @@ LOGGING = {
         },
     }
 }
+
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
